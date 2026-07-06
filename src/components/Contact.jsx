@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-
+import emailjs from '@emailjs/browser'
 const industries = [
   'Banking & Financial Services',
   'Staffing & Recruitment',
@@ -77,40 +77,45 @@ export default function Contact() {
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: undefined }))
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const validationErrors = validate()
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors)
-      return
-    }
 
-    setStatus('submitting')
 
-    try {
-      const formData = new FormData()
-      formData.append('access_key', 'YOUR_WEB3FORMS_KEY')
-      formData.append('subject', `DGI Verification Consultation - ${formState.company}`)
-      formData.append('from_name', 'DGI Website')
-      formData.append('botcheck', '')
-      Object.entries(formState).forEach(([key, val]) => formData.append(key, val))
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  const validationErrors = validate()
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors)
+    return
+  }
 
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData,
-      })
+  setStatus('submitting')
 
-      const data = await response.json()
-      if (data.success) {
-        setStatus('success')
-        setFormState({ name: '', company: '', email: '', phone: '', industry: '', service: '', message: '' })
-      } else {
-        setStatus('error')
-      }
-    } catch {
+  try {
+    const result = await emailjs.send(
+      import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      {
+        name: formState.name,
+        company: formState.company,
+        email: formState.email,
+        phone: formState.phone || 'Not provided',
+        industry: formState.industry,
+        service: formState.service,
+        message: formState.message || 'No additional message',
+      },
+      import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+    )
+
+    if (result.status === 200) {
+      setStatus('success')
+      setFormState({ name: '', company: '', email: '', phone: '', industry: '', service: '', message: '' })
+    } else {
       setStatus('error')
     }
+  } catch (err) {
+    console.error(err)
+    setStatus('error')
   }
+}
 
   return (
     <section
