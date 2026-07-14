@@ -109,7 +109,7 @@ export default function WhyDGI() {
             The Intelligence Advantage
           </h2>
           <p className="text-base leading-relaxed" style={{ color: '#64748B' }}>
-            Five foundational pillars that separate Digital Grade Intelligence from every other verification provider.
+            Five foundational pillars that separate Decision Grade Intelligence from every other verification provider.
           </p>
         </motion.div>
 

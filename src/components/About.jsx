@@ -36,7 +36,7 @@ export default function About() {
               <div>
                 <h3 className="text-sm font-semibold mb-2" style={{ color: '#CBD5E1' }}>Who We Are</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#64748B' }}>
-                  Digital Grade Intelligence is an enterprise background verification company built on the principle that hiring decisions deserve real intelligence — not aggregated database lookups. Founded by compliance professionals and technology specialists, we bridge the gap between speed and accuracy.
+                  Decision Grade Intelligence is an enterprise background verification company built on the principle that hiring decisions deserve real intelligence — not aggregated database lookups. Founded by compliance professionals and technology specialists, we bridge the gap between speed and accuracy.
                 </p>
               </div>
 
@@ -114,7 +114,7 @@ export default function About() {
               transition={{ delay: 0.7, duration: 0.5 }}
             >
               <p className="text-sm leading-relaxed italic" style={{ color: '#94A3B8' }}>
-                "We believe that every organization deserves to make hiring decisions based on verified truth — not assumptions, not approximations. That is the Digital Grade Intelligence standard."
+                "We believe that every organization deserves to make hiring decisions based on verified truth — not assumptions, not approximations. That is the Decision Grade Intelligence standard."
               </p>
               <div className="mt-4 text-xs font-semibold" style={{ color: '#0D8A66' }}>
                 DGI Leadership Team

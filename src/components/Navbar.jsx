@@ -14,7 +14,7 @@ function DGILogo() {
   return (
     <img
       src="/LOGO_1.png"
-      alt="Digital Grade Intelligence"
+      alt="Decision Grade Intelligence"
       className="h-14 w-auto object-contain rounded"
     />
   )

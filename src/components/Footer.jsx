@@ -31,7 +31,7 @@ function DGILogoFooter() {
   return (
     <img
       src="/LOGO_1.png"
-      alt="Digital Grade Intelligence"
+      alt="Decision Grade Intelligence"
       className="h-10 w-auto object-contain rounded"
     />
   )
@@ -116,7 +116,7 @@ export default function Footer() {
           style={{ borderColor: 'rgba(255,255,255,0.06)' }}
         >
           <p className="text-xs" style={{ color: '#334155' }}>
-            © {new Date().getFullYear()} Digital Grade Intelligence. All rights reserved.
+            © {new Date().getFullYear()} Decision Grade Intelligence. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <span className="text-xs" style={{ color: '#334155' }}>Privacy Policy</span>
