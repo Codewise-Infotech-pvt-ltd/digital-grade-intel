@@ -155,8 +155,8 @@ const handleSubmit = async (e) => {
             <div className="space-y-6">
               {[
                 {
-                  label: 'Enterprise Sales',
-                  value: 'sales@digitalgradeint.com',
+                  label: 'Business Enquiries',
+                  value: 'hello@decisiongradeintel.com',
                   icon: (
                     <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4">
                       <path d="M3 5H17M3 10H17M3 15H11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -165,7 +165,7 @@ const handleSubmit = async (e) => {
                 },
                 {
                   label: 'Support',
-                  value: 'support@digitalgradeint.com',
+                  value: 'verifications@decisiongradeintel.com',
                   icon: (
                     <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4">
                       <circle cx="10" cy="10" r="7" stroke="currentColor" strokeWidth="1.5" />
