@@ -173,6 +173,15 @@ const handleSubmit = async (e) => {
                     </svg>
                   ),
                 },
+                {
+                  label: 'Phone',
+                  value: '(+1) 813-686-1202',
+                  icon: (
+                    <svg viewBox="0 0 20 20" fill="none" className="w-4 h-4">
+                      <path d="M5 3H8L9.5 7L7.5 8.5C8.4 10.3 9.7 11.6 11.5 12.5L13 10.5L17 12V15C17 16.1 16.1 17 15 17C8.9 17 3 11.1 3 5C3 3.9 3.9 3 5 3Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+                    </svg>
+                  ),
+                },
               ].map((info) => (
                 <div key={info.label} className="flex items-start gap-3">
                   <div
